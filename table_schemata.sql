@@ -1,13 +1,12 @@
 -- Drop existing tables if you want to rerun the code
-DROP TABLE employees;
-DROP TABLE salaries;
-DROP TABLE titles;
-DROP TABLE departments;
-DROP TABLE dept_emp;
+DROP TABLE employees
+DROP TABLE salaries
+DROP TABLE titles
+DROP TABLE departments
+DROP TABLE dept_emp
 DROP TABLE dept_manager;
 
 -- Create 6 tables to upload data from csvs into
-
 CREATE TABLE employees (
   emp_no INT PRIMARY KEY,
   birth_date DATE,
