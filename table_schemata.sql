@@ -54,3 +54,50 @@ CREATE TABLE dept_manager (
   FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
   FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
+
+--- CODE FOR QUICK DATABASEDIAGRAMS.COM ---
+
+-- # To reset the sample schema, replace everything with
+-- # two dots ('..' - without quotes).
+
+-- employees
+-- -
+-- emp_no PK int
+-- birth_date date
+-- first_name varchar(200)
+-- last_name varchar(200)
+-- gender varchar(200)
+-- hire_date date
+
+-- salaries
+-- -
+-- emp_no int FK >- employees.emp_no
+-- salary int 
+-- from_date date
+-- to_date date
+
+-- titles
+-- -
+-- emp_no int FK >- employees.emp_no
+-- title varchar(200)
+-- from_date date
+-- to_date date
+
+-- departments
+-- -
+-- dept_no PK int
+-- dept_name varchar(200)
+
+-- dept_emp
+-- -
+-- emp_no int FK >- employees.emp_no
+-- dept_no varchar(200) FK >- departments.dept_no
+-- from_date date
+-- to_date date
+
+-- dept_manager
+-- -
+-- dept_no varchar(200) FK >- departments.dept_no
+-- emp_no int FK >- employees.emp_no
+-- from_date date
+-- to_date date
