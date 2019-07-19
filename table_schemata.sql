@@ -17,7 +17,7 @@ CREATE TABLE employees (
 );
 
 CREATE TABLE salaries (
-  emp_no INT,
+  emp_no INT PRIMARY KEY,
   salary INT,
   from_date DATE,
   to_date DATE,
@@ -25,7 +25,7 @@ CREATE TABLE salaries (
 );
 
 CREATE TABLE titles (
-  emp_no INT,
+  emp_no INT PRIMARY KEY,
   title VARCHAR,
   from_date DATE,
   to_date DATE,
@@ -38,7 +38,7 @@ CREATE TABLE departments (
 );
 
 CREATE TABLE dept_emp (
-  emp_no INT,
+  emp_no INT PRIMARY KEY,
   dept_no VARCHAR,
   from_date DATE,
   to_date DATE,
@@ -55,10 +55,7 @@ CREATE TABLE dept_manager (
   FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 
---- CODE FOR QUICK DATABASEDIAGRAMS.COM ---
-
--- # To reset the sample schema, replace everything with
--- # two dots ('..' - without quotes).
+--- CODE FOR QUICK DATABASEDIAGRAMS.COM FOR REFERENCE ONLY ---
 
 -- employees
 -- -
@@ -71,14 +68,14 @@ CREATE TABLE dept_manager (
 
 -- salaries
 -- -
--- emp_no int FK >- employees.emp_no
+-- emp_no PK int FK >- employees.emp_no
 -- salary int 
 -- from_date date
 -- to_date date
 
 -- titles
 -- -
--- emp_no int FK >- employees.emp_no
+-- emp_no PK int FK >- employees.emp_no
 -- title varchar(200)
 -- from_date date
 -- to_date date
@@ -90,7 +87,7 @@ CREATE TABLE dept_manager (
 
 -- dept_emp
 -- -
--- emp_no int FK >- employees.emp_no
+-- emp_no PK int FK >- employees.emp_no
 -- dept_no varchar(200) FK >- departments.dept_no
 -- from_date date
 -- to_date date
